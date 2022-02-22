@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --firstbox-color: rgb(255, 0, 0);
+    --secondbox-color: rgb(0,128,0);
+    --thirdbox-color: rgb(255,255,0);
+}
+
+.photo_container {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#polacchine {
+    background-color: var(--firstbox-color);
+    background-image: url(../img/01.png);
+}
+
+
+#adidas {
+    background-color: var(--secondbox-color);
+    background-image: url(../img/02.png);
+}
+
+#converse{
+    background-color: var(--thirdbox-color);
+    background-image: url(../img/03.png);
+}
+
+
+.photo_text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.photo_text > h2  {
+    font-size: 3rem;
+}
