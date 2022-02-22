@@ -1,50 +1,118 @@
-*{
+/* Utilities */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --firstbox-color: rgb(255, 0, 0);
-    --secondbox-color: rgb(0,128,0);
-    --thirdbox-color: rgb(255,255,0);
+body {
+    font-family: 'Russo One', sans-serif;
 }
 
+:root {
+    --firstbox-color: rgb(255, 0, 0);
+    --secondbox-color: rgb(0, 128, 0);
+    --thirdbox-color: rgb(255, 255, 0);
+    --bg_nav-color: rgb(255, 255, 255);
+    --nbr_nav-color: rgb(0, 0, 0);
+
+}
+
+
+/* NAV BAR */
+
+.navbar ul {
+    list-style: none;
+    float: right;
+    margin: 42px;
+
+}
+
+.navbar ul>li {
+    display: inline-block;
+    padding: 32px;
+}
+
+.navbar a {
+    position: fixed;
+
+    background-color: var(--bg_nav-color);
+    z-index: 2;
+    text-decoration: none;
+    color: var(--nbr_nav-color);
+    border-radius: 50%;
+    padding: 11px;
+    box-shadow: 1px 1px 5px;
+
+}
+
+
+
+/* Settaggio container */
 .photo_container {
     height: 100vh;
-    background-size: cover;
+    background-size: 40%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#polacchine {
+
+/* INSERIMENTO COLORI DI SFONDO */
+.red {
     background-color: var(--firstbox-color);
+}
+
+.green {
+    background-color: var(--secondbox-color);
+}
+
+.yellow {
+    background-color: var(--thirdbox-color);
+}
+
+/* INSERIMENTO IMG DI SFONDO */
+#polacchine {
     background-image: url(../img/01.png);
 }
 
 
 #adidas {
-    background-color: var(--secondbox-color);
     background-image: url(../img/02.png);
 }
 
-#converse{
-    background-color: var(--thirdbox-color);
+#converse {
     background-image: url(../img/03.png);
 }
 
 
-.photo_text{
+/* Centratura IMG
+************************** */
+.Y_photo_text, .G_photo_text {
     position: absolute;
     left: 50%;
-    top: 50%;
-    color: white;
+    top: 85%;
     transform: translate(-50%, -50%);
     text-align: center;
+    text-transform: uppercase;
 }
 
 
-.photo_text > h2  {
-    font-size: 3rem;
+
+/* Impostazione colori TESTO IMG */
+.Y_photo_text {
+    color: var(--thirdbox-color);
+}
+
+.G_photo_text {
+    color: var(--secondbox-color);
+
+}
+
+
+/* Dimensionamento TESTO IMG */
+.Y_photo_text>h2,
+.G_photo_text>h2 {
+    font-size: 4rem;
 }
